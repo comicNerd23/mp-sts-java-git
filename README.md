@@ -1,0 +1,1 @@
+# mp-sts-java-git
