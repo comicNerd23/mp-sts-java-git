@@ -4,6 +4,7 @@ public class SuperDemo {
 
 	public static void main(String[] args) {
 		Bbb b = new Bbb(4);
+		
 	}
 
 }

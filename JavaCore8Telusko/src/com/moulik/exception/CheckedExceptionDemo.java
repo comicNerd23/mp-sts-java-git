@@ -4,7 +4,20 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//Finally block is mostly used to close the resources because otherwise there can be memory leak
+/**
+ *	Checked Exceptions are those which are checked by the compiler at Compilation-Time. These exceptions cannot simply be ignored, the programmer should 
+ * 	take care of (handle) these exceptions.
+ * 	ClassNotFoundException			Class not found
+ *	CloneNotSupportedException		Attempt to clone an object that doesn't implement the Cloneable interface
+ *	IllegalAccessException			Access to a class is denied
+ *	InstantiationException			Attempt to create an object of an abstract class or interface
+ *	InterruptedException			One thread has been interrupted by another thread
+ *	NoSuchFieldException			A requested field does not exist
+ *	NoSuchMethodException			A requested method doesn't exist
+ *	ReflectiveOperationException	Superclass of reflection-related exceptions
+ *
+ *	Finally block is mostly used to close the resources because otherwise there can be memory leak.
+ */
 public class CheckedExceptionDemo {
 
 	public static void main(String[] args) throws Exception {

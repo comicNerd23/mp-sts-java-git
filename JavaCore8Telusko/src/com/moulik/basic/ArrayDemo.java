@@ -1,9 +1,15 @@
 package com.moulik.basic;
 
+/**
+ * 	Arrays can be easily created in java similar to C/C++/. However, it is useful to use Arrays class to your primitive array because there are different 
+ * 	operations that you can do
+ *
+ */
 public class ArrayDemo {
 
 	public static void main(String[] args) {
 
+		//Standard way to define and initialize an array in Java
 		int[] nums = new int[4];
 		System.out.println(nums[3]); //Default value of int (0) is printed
 		
@@ -38,6 +44,11 @@ public class ArrayDemo {
 			}
 			System.out.println();
 		}
+		
+		/*
+		 * From Java 8+, you can create stream from arrays and perform all stream operations.
+		 */
+		String[] names= {"Moulik","Bhuwan","Meenu","Puneet"};
 		
 	}
 

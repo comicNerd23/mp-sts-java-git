@@ -11,7 +11,7 @@ public class FindingAnagram {
 		//	0	1	2	3
 		//	a	b	a	b
 		//	a	b	c	a
-		String a = "silents";
+		String a = "silencs";
 		String b = "listens";
 		
 		System.out.println(isAnagram(a,b));
