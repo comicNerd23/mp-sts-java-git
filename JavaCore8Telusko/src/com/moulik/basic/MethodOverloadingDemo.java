@@ -1,5 +1,9 @@
 package com.moulik.basic;
 
+/**
+ * Method overloading is a feature of Java in which a class has more than one method of the same name and their parameters are different
+ * It is different from overriding which is used in the context of Inheritance.
+ */
 public class MethodOverloadingDemo {
 
 	public static void main(String[] args) {
@@ -15,9 +19,8 @@ public class MethodOverloadingDemo {
 		calc.add(5,2,9);
 		calc.add(5.5,2.5);
 		
-		
 	}
-
+	
 }
 
 class Calcul {

@@ -19,7 +19,7 @@ public class InterfaceDemo {
 //Interface can only declare methods not define them. Abstract classes can do both.
 //All methods in an interface are abstract by default. From Java 8, default methods are introduced.
 interface Writer {
-	public void write();
+	void write();
 }
 class Pen implements Writer {
 

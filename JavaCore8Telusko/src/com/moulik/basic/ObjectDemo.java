@@ -30,7 +30,7 @@ class Calc {
 		result = num1 + num2;
 	}
 	
-	//Constructor is the member method
+	//Constructor is the member method that is used to create objects (that is used to allocate memory and so on).
 	//It has the same name as the class name.
 	//It will never return anything
 	//It will be used to allocate memory

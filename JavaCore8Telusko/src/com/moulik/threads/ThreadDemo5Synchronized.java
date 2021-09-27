@@ -34,6 +34,7 @@ class Counter {
 	
 	int count;
 	
+	// Remove the synchronized keyword in the method below and see the difference from the keyword is present
 	public synchronized void increment() {
 		count++;
 	}

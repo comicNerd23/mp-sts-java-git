@@ -22,19 +22,19 @@ import java.util.ArrayList;
  * 5. What are common String methods?
  * Ans: equals() and equalsIgnoreCase() are most common. They are used to compare two strings since String class implements Comparable interface.
  * 		Other methods are :
- * 			split(regex): which returns a String[] of strings seperated by "_" or "/" or any other regex
- * 			contains(CharSequence cs): which checks if cs is present in the string.
- * 			length(): which returns the length of the string
- * 			replace(CharSequence old, CharSequence new): replaces all occurences of old with new.
- * 			format(Locale l, String format, Object… args): to format the string
- * 			subString(a, b): used to find substring from a (inclusive) to b (exclusive) 
- * 			concat(): to join two strings. similar to using '+' with strings
- * 			intern(): When the intern method is invoked, if the pool already contains a string equal to this String object as determined by the equals(Object)
+ * 			1. split(regex): which returns a String[] of strings seperated by "_" or "/" or any other regex
+ * 			2. contains(CharSequence cs): which checks if cs is present in the string.
+ * 			3. length(): which returns the length of the string
+ * 			4. replace(CharSequence old, CharSequence new): replaces all occurences of old with new.
+ * 			5. format(Locale l, String format, Object… args): to format the string
+ * 			6. subString(a, b): used to find substring from a (inclusive) to b (exclusive) 
+ * 			7. concat(): to join two strings. similar to using '+' with strings
+ * 			8. intern(): When the intern method is invoked, if the pool already contains a string equal to this String object as determined by the equals(Object)
  * 					method, then the string from the pool is returned. Otherwise, this String object is added to the pool and a reference to this String 
  * 					object is returned.
- * 			charAt(int a): returns the character at a index of String
- * 			codePointAt(int a): returns the codePoint(Unicode character) at a index of String
- * 			join(regex, list): joins all the elements of the list (or array) with regex (like space, / etc) between them
+ * 			9. charAt(int a): returns the character at a index of String
+ * 			10. codePointAt(int a): returns the codePoint(Unicode character) at a index of String
+ * 			11. join(regex, list): joins all the elements of the list (or array) with regex (like space, / etc) between them
  * 
  * 6. Are Strings thread-safe?
  * Ans: Yes, since Strings are immutable, hence they are thread-safe.

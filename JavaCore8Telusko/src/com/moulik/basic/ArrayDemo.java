@@ -1,8 +1,16 @@
 package com.moulik.basic;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 /**
- * 	Arrays can be easily created in java similar to C/C++/. However, it is useful to use Arrays class to your primitive array because there are different 
- * 	operations that you can do
+ * 	Arrays are a data-structure which are used to hold a collection of elements. The elements are placed in sequential memory blocks and are indexed so as to 
+ * 	access easily.
+ * 	A primitive array (one without any type associated to it) can be easily created in Java similar to C/C++. However, it is useful to use Arrays class in place 
+ * 	of your primitive array because there are different operations that you can do. Be aware the performance suffers a little with Arrays compared to primitive 
+ * 	array.
+ * 
+ * 	When you try to access an element beyond the length of the array, you will get an ArrayIndexOutOfBoundsException(R).
  *
  */
 public class ArrayDemo {
@@ -49,6 +57,17 @@ public class ArrayDemo {
 		 * From Java 8+, you can create stream from arrays and perform all stream operations.
 		 */
 		String[] names= {"Moulik","Bhuwan","Meenu","Puneet"};
+		Arrays.stream(names)
+			.forEach(System.out :: println);
+		
+		
+		String[] names2= {"Moulik","Anshul","Arun","Ankit","Nakul"};
+		
+		String[] names3 = {"Sreyas","Gagan","Ankit","Deepu","Nakul","Siddharth","Moulik"};
+		
+		/*
+		 * Stream.of(names, names2) .flatMap( x -> x).reduce();
+		 */
 		
 	}
 

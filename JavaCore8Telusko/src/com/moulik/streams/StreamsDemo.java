@@ -99,6 +99,7 @@ public class StreamsDemo {
 			.map( s -> s*s )
 			.average()
 			.ifPresent(System.out::println);
+
 		
 		System.out.println("Example 7: Stream from List, filter and print");
 		List<String> people = Arrays.asList(names);
@@ -108,20 +109,19 @@ public class StreamsDemo {
 			.forEach(System.out::print);
 		
 		System.out.println("Example 8: Stream from List, filter and print");
-		Stream<String> bands = Files.lines(Paths.get("bands2.txt"));
-		bands
-			.sorted()
-			.filter( x -> x.length() > 13 )
-			.forEach( System.out::println );
-		bands.close();
-		
+		if (Files.exists(Paths.get("bands2.txt"))) {
+			Stream<String> bands = Files.lines(Paths.get("bands2.txt"));
+			bands.sorted().filter(x -> x.length() > 13).forEach(System.out::println);
+			bands.close();
+		}
 		System.out.println("Example 9: Stream rows from text file and save to List");
-		List<String> bands2 = 
-				Files.lines(Paths.get("bands.txt"))
-				.filter(s -> s.startsWith("jit"))
-				.collect(Collectors.toList());
-		bands2.forEach(System.out :: println);
-		
+		if (Files.exists(Paths.get("bands2.txt"))) {
+			List<String> bands2 = 
+					Files.lines(Paths.get("bands.txt"))
+					.filter(s -> s.startsWith("jit"))
+					.collect(Collectors.toList());
+			bands2.forEach(System.out :: println);
+		}
 		System.out.println("Example 10: Stream rows from csv file, parse data from rows");
 		
 		System.out.println("Example 11: Stream rows from csv file, parse data from rows");
@@ -138,6 +138,7 @@ public class StreamsDemo {
 		System.out.println("Example 14: Reduction - summary statistics (Only works on Integers)");
 		IntSummaryStatistics summary = IntStream.of(5, 6, 9)
 			.summaryStatistics();
+		System.out.println("summary:"+summary);
 	}
 
 }

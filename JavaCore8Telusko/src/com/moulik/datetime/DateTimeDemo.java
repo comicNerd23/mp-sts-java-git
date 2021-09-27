@@ -141,7 +141,7 @@ public class DateTimeDemo {
         System.out.println("----------------------------------------------------");
         
         /*
-         * 4. Instant API (3): now(), ofEpochMilli(long noOfMilliSecondsSinceEpochOf1970-01-01T00:00:00Z), ofDays(long days)
+         * 4. Instant API (3): now(), ofEpochMilli(long noOfMilliSecondsSinceEpochOf1970-01-01T00:00:00Z), Duration.ofDays(long days)
          * 
          * Instant class is used to work with machine readable time format. Instant stores date time in unix timestamp.
          */
@@ -202,8 +202,8 @@ public class DateTimeDemo {
         /*
          * 6. Java 8 Data Parsing and Formatting (3 + 3): 
          * 	date.format(DateTimeFormatter.ofPattern(CharSequence like "d::MMM::uuuu")), date.format(DateTimeFormatter.ofPattern(DateTimeFormatter formatter)
-         * 	time.format(DateTimeFormatter.ofPattern(CharSequence like "d::MMM::uuuu")), date.format(DateTimeFormatter.ofPattern(DateTimeFormatter formatter)
-         * 	dateTime.format(DateTimeFormatter.ofPattern(CharSequence like "d::MMM::uuuu")), date.format(DateTimeFormatter.ofPattern(DateTimeFormatter formatter)
+         * 	time.format(DateTimeFormatter.ofPattern(CharSequence like "d::MMM::uuuu")), time.format(DateTimeFormatter.ofPattern(DateTimeFormatter formatter)
+         * 	dateTime.format(DateTimeFormatter.ofPattern(CharSequence like "d::MMM::uuuu")), dateTime.format(DateTimeFormatter.ofPattern(DateTimeFormatter formatter)
          * 	date.parse(CharSequence text, DateTimeFormatter formatter)
          * 	time.parse(CharSequence text, DateTimeFormatter formatter)
          * 	dateTime.parse(CharSequence text, DateTimeFormatter formatter)

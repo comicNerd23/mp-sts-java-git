@@ -1,4 +1,4 @@
-package com.moulik.basic;
+package com.moulik.codingInterview;
 
 /**	Also Check: https://www.journaldev.com/2366/core-java-interview-questions-and-answers
  * 1. What is static and where do we use it?
@@ -10,7 +10,7 @@ package com.moulik.basic;
  * Ans: No. They can't. You can try by creating a member variable int i = 0 in a class. In the main method of this class, try accessing this variable. The
  * 		compiler will give a compile-time exception. (Check StaticDemo.java)
  * 
- * 3. In what order does the JVM executes the method in a Java program?
+ * 3. In what order does the JVM execute the method in a Java program?
  * Ans: First it creates static variables, then it creates static block, then static methods (including main), then other methods like instance methods.
  * 
  * 4. How to make a class immutable?
@@ -29,7 +29,7 @@ package com.moulik.basic;
  * 		copied, not the whole objects. If we copy the objects as well, that is called deep copy. 
  * 
  * 6. Is Java pass by value or pass by referencce?
- * Ans: Java is pass by value. 
+ * Ans: Java is pass by value. To check if any language is pass by value or pass by reference, we should write the swap function in that language.
  *
  */
 public class CoreInterviewQuestions {

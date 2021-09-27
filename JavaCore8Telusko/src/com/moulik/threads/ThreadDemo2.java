@@ -10,7 +10,9 @@ public class ThreadDemo2 {
 		Thread thread1 = new Thread(obj1);
 		Thread thread2 = new Thread(obj2);
 		thread1.start();
-		Thread.sleep(500);
+		Thread.sleep(500); //If you comment this line and run the program, the behavior will be non-deterministic because one thread will run when other one is 
+		//sleeping
+		
 		thread2.start();
 		
 		

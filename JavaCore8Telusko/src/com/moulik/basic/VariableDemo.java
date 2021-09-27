@@ -1,5 +1,6 @@
 package com.moulik.basic;
 
+@SuppressWarnings({ "unused" })
 public class VariableDemo {
 
 	public static void main(String[] args) {
@@ -14,9 +15,10 @@ public class VariableDemo {
 		int i = 400000;				//4 bytes
 		short s = 5;				//2 bytes	-32768 to 32767
 		byte b = 5;					//1 byte	-128 to 127
-		float f = 5.5f;				//
+		float f = 5.5f;				//4 bytes
 		double d = 5.5;	
 		char c = 'B';
+		boolean x = false;			//Non deterministic memory
 		c = 67;	//ASCII value for 'B'
 		
 		

@@ -1,4 +1,4 @@
-package com.moulik.strings;
+package com.moulik.codingInterview.strings;
 
 public class ReverseString {
 

@@ -9,6 +9,7 @@ public class ScannerDemo {
 		Scanner sc = new Scanner(System.in);
 		String n = sc.next();
 		System.out.println("n:"+n);
+		sc.close();
 	}
 
 }

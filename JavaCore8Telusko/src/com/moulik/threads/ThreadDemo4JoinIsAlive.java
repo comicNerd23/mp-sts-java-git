@@ -47,11 +47,13 @@ public class ThreadDemo4JoinIsAlive {
 			System.out.println("T2 is alive");
 		}
 		
-		t1.join();
-		t2.join();
+		t1.join();	//Join method will join the thread to the main thread. That means, main thread will not execute until the joined thread is finished from this
+		t2.join();	//point of code onwards.
 		
 		System.out.println("Bye");//Now when we execute this code here, it will join t1 and t2 threads, ie, it will execute those first before main thread.
 		
+		//At this point in program execution, both t1 and t2 are finished since they were joined to main thread and hence they had to finish before main thread 
+		//could get back the control and reach here. So these two lines will never print.
 		if(t1.isAlive()) {
 			System.out.println("T1 is alive still");
 		}

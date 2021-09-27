@@ -1,7 +1,7 @@
 package com.moulik.interfaces;
 //Till Java 7, Abstract Class can have both abstract and non-abstract methods, that is, it can both declare and define methods,
 //while interfaces can only declare methods.
-//From Java 8, we can define methods in interfaces. These methods have to be default or static.
+//From Java 8, we can define methods in interfaces. These methods have to be default or static. Default methods can be overridden, static methods cannot.
 //From Java 8, we can also have variables in interfaces but these variables are always final.
 public class Interface8Demo {
 

@@ -17,7 +17,7 @@ public class ComparableDemo {
 		//This natural ordering has been defined in the compareTo method
 		Collections.sort(students);
 		//To give our own logic of sorting, we can pass in a Comparator obj
-		Collections.sort(students, (i,j)->(i.marks>j.marks ? 1 : -1));
+		//Collections.sort(students, (i,j)->(i.marks>j.marks ? 1 : -1));
 		students.stream().forEach(s->System.out.println(s));
 		
 	}
