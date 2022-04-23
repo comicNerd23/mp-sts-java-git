@@ -3,10 +3,42 @@ package com.moulik.collections;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
+import java.util.Spliterator;
 import java.util.stream.Collectors;
 
+/**
+ * 	List (4-2-2-2-2 = 12)
+ * 
+ * 
+ * 				E					get(int index)
+ * 				boolean 			add(E obj), add(int index, E element)
+ * 				E					set(int index, E element)
+ * 				boolean 			remove(E obj)
+ * 				
+ * 				int					indexOf(Object o)
+ * 				int					lastIndexOf(Object o)
+ * 
+ * 				ListIterator<E> 	listIterator()
+ * 				ListIterator<E> 	listIterator(int index)
+ * 	default		Spliterator<E>		spliterator()
+ * 
+ * 	default		void				sort(Comparator<? super E> comp)
+ * 				List<E>				subList(int start, int end)
+ * 
+ * 	static		List<E>				of(E... elements)
+ * 	static		List<E>				copyOf(Collection c)
+ *
+ *	Arrays VS LinkedList
+ *	
+ *
+ *	ArrayList VS LinkedList
+ *	
+ *	HashMap vs HashTable
+ *	1. Hashtable is synchronised and Hashmap is not. 
+ *	2. Hashmap allows null values as key but Hashtable does not.
+ *	- The complexity is O(1)
+ */
 public class ListDemo {
 
 	public static void main(String[] args) {

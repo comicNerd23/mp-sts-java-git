@@ -12,14 +12,14 @@ public class ReverseString {
 
 	private static String reverseString(String str) {
 		
-		String x = "";
+		StringBuilder x = new StringBuilder();
 		int i;
 		for(i = str.length()-1; i >= 0; i--) {
 			char l = str.charAt(i);
-			x = x+l;
+			x = x.append(l);
 		}
  		
-		return x;
+		return x.toString();
 	}
 
 }

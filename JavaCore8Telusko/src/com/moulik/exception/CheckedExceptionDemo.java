@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- *	Checked Exceptions are those which are checked by the compiler at Compilation-Time. These exceptions cannot simply be ignored, the programmer should 
- * 	take care of (handle) these exceptions.
+ *	Checked Exceptions are those which are checked by the compiler at Compilation-Time. These exceptions cannot simply be 
+ *	ignored, the programmer should take care of (handle) these exceptions.
  * 	ClassNotFoundException			Class not found
  *	CloneNotSupportedException		Attempt to clone an object that doesn't implement the Cloneable interface
  *	IllegalAccessException			Access to a class is denied

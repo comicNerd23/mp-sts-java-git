@@ -4,7 +4,7 @@ public class OperatorsDemo {
 	
 	/*
 	 * 
-	 * Java Operator Precedence: PUMA-SRE-BLTA											PreTA - RTL other LTR
+	 * Java Operator Precedence: PUMA-SRE-BLTA											PreTA - RTL, others - LTR
 	 * 
 	 * postfix increment and decrement					++ --							left to right
 	 * prefix increment and decrement 					++ --							right to left

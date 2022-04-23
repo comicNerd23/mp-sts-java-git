@@ -15,6 +15,9 @@ public class BarclaysCoding2 {
 			str = str+"50";
 		}
 		System.out.println(list);
+		list.stream()
+		.map(x -> x+"50")
+		.forEach(System.out :: println);
 	}
 
 	public static void main(String[] args) {

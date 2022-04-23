@@ -18,7 +18,7 @@ public class ComparableDemo {
 		Collections.sort(students);
 		//To give our own logic of sorting, we can pass in a Comparator obj
 		//Collections.sort(students, (i,j)->(i.marks>j.marks ? 1 : -1));
-		students.stream().forEach(s->System.out.println(s));
+		students.forEach(s->System.out.println(s));
 		
 	}
 

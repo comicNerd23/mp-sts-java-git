@@ -3,6 +3,7 @@ package com.moulik.codingInterview.strings;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * This program provides a way to take a Java class name and change it to C++ class name and vice-versa.
@@ -14,10 +15,10 @@ public class ChangingNameFormatCognizant {
 
 	public static void main(String[] args) {
 		
-		String cPlusPLusName = "my_first_class";
+		String cPlusPlusName = "my_first_class";
 		String javaName = "myFirstClass";
 		
-		String x = cToJava(cPlusPLusName);
+		String x = cToJava(cPlusPlusName);
 		System.out.println(x);
 		
 		String y = javaToC(javaName);
@@ -26,35 +27,32 @@ public class ChangingNameFormatCognizant {
 	}
 
 	private static String javaToC(String javaName) {
-		char[] arr = javaName.toCharArray();
-		List<Integer> indexes = new ArrayList<>();
-		for(int i=0; i< arr.length; i++) {
-			if(String.valueOf(arr[i]).equals(String.valueOf(arr[i]).toUpperCase())) {
-				indexes.add(i);
-			}
-		}
-		System.out.println("Indexes:"+indexes);
-		String[] arrStr = new String[indexes.size()+1];
-		//for(int j=0; j<indexes.size(); j++) {
-		int size = indexes.size();
-		int f = 0;
-		while(size > 0) {
-			int beginIndex = 0;
-			int endIndex = indexes.get(f);
-			arrStr[f] = javaName.substring(beginIndex, endIndex);
-			if(true) {
-				beginIndex = indexes.get(f);
-				endIndex = indexes.get(f++);
-			}
-			size--;
-		}
 		
-		return String.join("_", arrStr);
+		//javaName.
+		
+		int start = 0;
+		int end = javaName.length()-1;
+		
+		int x=0;
+		char[] arr = javaName.toCharArray();
+		
+		List<String> strings = new ArrayList<String>();
+		while(x<=end) {
+			if(String.valueOf(arr[x]).equals(String.valueOf(arr[x]).toUpperCase())) {
+				strings.add(javaName.substring(start,x));
+				start = x;
+			} else if(x==end) {
+				strings.add(javaName.substring(start,x+1));
+			}
+			x++;
+		}
+		List<String> strs = strings.stream().map(a -> a.toLowerCase()).collect(Collectors.toList());
+		return String.join("_", strs);
 	}
 
-	private static String cToJava(String cPlusPLusName) {
-		String[] x = cPlusPLusName.split("_");
-		String[] y = new String[x.length];
+	private static String cToJava(String cPlusPlusName) {
+		String[] x = cPlusPlusName.split("_");
+		//String[] y = new String[x.length];
 		
 		for(int i=0; i<x.length; i++) {
 			
@@ -63,9 +61,9 @@ public class ChangingNameFormatCognizant {
 				m = m.toUpperCase();
 			}
 			String n = x[i].substring(1);
-			y[i] = m.concat(n);
+			x[i] = m.concat(n);
 		}
-		return String.join("", y);
+		return String.join("", x);
 	}
 
 }

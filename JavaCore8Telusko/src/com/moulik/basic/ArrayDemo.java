@@ -4,13 +4,14 @@ import java.util.Arrays;
 import java.util.stream.Stream;
 
 /**
- * 	Arrays are a data-structure which are used to hold a collection of elements. The elements are placed in sequential memory blocks and are indexed so as to 
- * 	access easily.
- * 	A primitive array (one without any type associated to it) can be easily created in Java similar to C/C++. However, it is useful to use Arrays class in place 
- * 	of your primitive array because there are different operations that you can do. Be aware the performance suffers a little with Arrays compared to primitive 
- * 	array.
+ * Arrays are a data-structure which are used to hold a collection of elements. The elements are placed in sequential 
+ * memory blocks and are indexed so as to be accessed easily.
  * 
- * 	When you try to access an element beyond the length of the array, you will get an ArrayIndexOutOfBoundsException(R).
+ * A primitive array (one without any type associated to it) can be easily created in Java similar to C/C++. However, it 
+ * is useful to use Arrays class in place of your primitive array because there are different operations that you can do.
+ * Be aware the performance suffers a little with Arrays compared to primitive array.
+ * 
+ * When you try to access an element beyond the length of the array, you will get an ArrayIndexOutOfBoundsException(R).
  *
  */
 public class ArrayDemo {

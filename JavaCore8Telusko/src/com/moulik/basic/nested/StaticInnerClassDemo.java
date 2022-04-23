@@ -1,7 +1,8 @@
 package com.moulik.basic.nested;
 
 /**
- * Static nested class is a class which is static that is, it is associated with the class and not the object and hence it can be referenced using Classname only.
+ * Static nested class is a class which is static that is, it is associated with the class and not the object and hence 
+ * it can be referenced using Classname only.
  *
  * 
  */
@@ -31,7 +32,8 @@ class Outer1 {
 		
 		public void display() {
 			System.out.println("Display:"+x);
-			//System.out.println("Display:"+i); This line will not compile because a static variable can only be accessed from inside static method/block/class.
+			//System.out.println("Display:"+i); This line will not compile because a static variable can only be 
+			//accessed from inside static method/block/class.
 		}
 		
 	}

@@ -1,12 +1,15 @@
 package com.moulik.strings;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 
 /**
  * 1. What is a string in Java? What is so unique about String?
- * Ans: String is a Java datatype but not primitive data type. It is an class through which we can create string objects which are immutable. Strings are actually
- * 		created in a place in Java Heap Memory called Spring Pool. It is only possible because string are immutable. It employs Flyweight Design Pattern. 
- * 		String Pool helps in saving a lot of space for Java Runtime although it takes more time to create the string.
+ * A: String is a Java datatype but not primitive data type. It is an class through which we can create string objects
+ * which are immutable. Strings are actually created in a place in Java Heap Memory called Spring Pool. It is only 
+ * possible because string are immutable. It employs Flyweight Design Pattern. 
+ * String Pool helps in saving a lot of space for Java Runtime although it takes more time to create the string.
  * 
  * 2. How many Strings are getting Created in the String Pool? eg String str = new String("cat");
  * Ans: In the above statement, either 1 or 2 string will be created. If there is already a string literal “Cat” in the pool, then only one string “str” will be 
@@ -50,6 +53,14 @@ public class StringInterviewQuestions {
 		
 		String a = String.valueOf("Cat");
 		var abc = new ArrayList<Integer>(); //From Java 10, we can use var keyword for local defined variables without denoting any types
+	
+		String b = "rotator";
+		char[] newArr = new char[b.length()];
+		for(int i=b.length()-1, j=0; i>=0; i--, j++) {
+			newArr[j] = b.toCharArray()[i];
+		}
+		
+		System.out.println(String.valueOf(newArr).equals(b));
 	}
 
 }

@@ -3,8 +3,9 @@ package com.moulik.collections;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Comparator;
 
-/**	116-122-25
+/**	116-122-25	SSRFCSAR-BFDMM-ILELNNA
  * Collections is a class in Java which provides many utility methods for dealing with common problems in collections :
  * All methods are static, whose first argument is the collection on which the operation is to be performed.
  * 
@@ -14,7 +15,7 @@ import java.util.List;
  * 2. Shuffling (1)
  * 		shuffle(List<T>)	shuffle(List<T>, Random)
  * 
- * 3. RoutineDataManipulation (6)
+ * 3. RoutineDataManipulation (6) RFCSAR
  * 		reverse(List<T>)	reverseOrder()		reverseOrder(Comparator<T>)
  * 		fill(List<? super T> list, T t)
  * 		copy(List<? super T) list1, List<? extends T> list2)
@@ -47,6 +48,7 @@ import java.util.List;
  * 			List<T> nCopies(int num, T obj)
  * 		Convenience Set of keys From Map
  * 			Set<E> 	newSetFromMap(Map<E, boolean> n)
+ * 		Stack from deque
  * 		Queue<T> asLifoQueue(Deque<T> c)
  * 
  *
@@ -76,6 +78,10 @@ public class CollectionsDemo {
 		System.out.println("-------------------------- With Other Collections ------------------------------------");
 	
 		Collections.sort(names, (a,b) -> a.compareTo(b));
+		System.err.println(names);
+		
+		Comparator<? super String> c = null;
+		Collections.sort(names, c);
 		System.err.println(names);
 	}
 

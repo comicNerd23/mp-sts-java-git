@@ -4,9 +4,18 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 
 /**
- * 	Optional Class is useful for determining when an object is null or when an object can possibly throw NullPointerException
+ * Optional Class is useful for determining when an object is null or when an object can possibly throw 
+ * NullPointerException. Java Optional is a container object which may or may not contain a non-null value. If a value is
+ * present, isPresent() will return true and get() will return the value. 
  * 
- * 	There are 3 methods to create Optional Objects:
+ * Stream terminal operations return Optional object. Some of these methods are:
+ * 	Optional<T> reduce(BinaryOperator<T> accumulator)
+ * 	Optional<T> min(Comparator<? super T> comparator)
+ * 	Optional<T> max(Comparator<? super T> comparator)
+ * 	Optional<T> findFirst()
+ * 	Optional<T> findAny()
+ * 
+ * There are 3 methods to create Optional Objects:
  * 	Optional.empty()	Optional.of(T)		Optional.ofNullable(T)
  *
  *	Some Other in-built methods:
@@ -39,7 +48,8 @@ public class OptionalDemo {
 		System.out.println("--------------Instance Methods---------------");
 		
 		try {
-			System.out.println(x3.get()); //Here get() will give NoSuchElementException if the optional does not have any value
+			//Here get() will give NoSuchElementException if the optional does not have any value
+			System.out.println(x3.get()); 
 		} catch(NoSuchElementException e) {
 			System.out.println(e.getLocalizedMessage());
 		}
@@ -48,7 +58,8 @@ public class OptionalDemo {
 			System.out.println(x3.get());
 		}
 		
-		//If you want to return some default value when that optional value is not found, use orElse(String) orElseGet(Supplier) orElseThrow(Supplier)
+		//If you want to return some default value when that optional value is not found, use orElse(String) 
+		//orElseGet(Supplier) orElseThrow(Supplier)
 		System.out.println(x3.orElse("Author not present"));
 		
 		System.out.println(x3.orElseGet( () -> "Did not find any Author for this.") );
@@ -62,7 +73,7 @@ public class OptionalDemo {
 class Book {
 	
 	private String name;
-	private int pages;
+	private Integer pages;
 	private String author;
 	
 	public Book(String name, int pages, String author) {
@@ -72,16 +83,16 @@ class Book {
 		this.author = author;
 	}
 
-	public String getName() {
-		return name;
+	public Optional<String> getName() {
+		return Optional.ofNullable(name);
 	}
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	public int getPages() {
-		return pages;
+	public Optional<Integer> getPages() {
+		return Optional.ofNullable(pages);
 	}
 
 	public void setPages(int pages) {

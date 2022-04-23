@@ -2,13 +2,15 @@ package com.moulik.basic.nested;
 
 /**
  * Nested Classes are of two types:
- * 1. Static nested classes: can access non-static members of outer class using objects, that's why they are rarely used. (Check Builder Design Pattern)
+ * 1. Static nested classes: can access non-static members of outer class using objects, that's why they are rarely used.
+ *  (Check Builder Design Pattern)
  * 2. NonStatic nested classes or Inner Classes: has access to all variables and methods of its outer class.
  * 
  * Inner classes are of three types:
  * i. Inner Class: Explained below
  * ii. Method Local Inner Class: Can be instantiated only within the method where the inner class is defined.
- * iii. Anonymous Inner Class: Class declared without a class name. It is declared and instantiated at the same time. Further explained later
+ * iii. Anonymous Inner Class: Class declared without a class name. It is declared and instantiated at the same time. 
+ * Further explained later
  * 
  */
 public class InnerClassDemo {
